@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zahleneingabe</title>
+  <script>
+    function validateInput() {
+      var input = document.getElementById("numberInput").value;
+      if (input.length <= 5 && /^\d+$/.test(input)) {
+        window.location.href = "https://www.paypal.com/qrcodes/managed/c5b81388-c7eb-4710-8580-b2399f477afc?utm_source=old_merchant_lp";
+      } else {
+        alert("Bitte geben Sie eine maximal 5-stellige Zahl ein!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Zahleneingabe</h1>
+  <input type="text" id="numberInput" placeholder="Max. 5-stellige Zahl" />
+  <br /><br />
+  <button onclick="validateInput()">Weiter</button>
+</body>
+</html>
